@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sabeeha 🌹</title>
+    <link rel="stylesheet" href="romantic-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="stars"></div>
+        
+        <div class="page page-1 active">
+            <div class="content">
+                <h1 class="title">🌹 Happy Birthday Sabeeha 🌹</h1>
+                <p class="subtitle">Main jaanta hoon ke tum is waqt mujhse naraz ho...</p>
+                <p class="message">Lekin aaj tumhara birthday hai, aur main chahta hoon ke tum jaano ke tumhare liye mera pyaar kitna gehraa hai.</p>
+                <button class="btn" onclick="nextPage()">Continue Reading 💝</button>
+            </div>
+        </div>
+
+        <div class="page page-2">
+            <div class="content">
+                <h2 class="title">Main Tumse Maafi Maangta Hoon 💔</h2>
+                <p class="message">
+                    Agar meri kisi baat se tumhara dil dukha hai, toh main hath jod kar tumse maafi maangta hoon. 
+                </p>
+                <p class="message">
+                    Tum toh jaanti ho na ke tumhari is narazgi se mera dil kitna dukh raha hai. Har din main sirf ek hi socha rehta hoon - 
+                    ke kaash tum mere paas wapas aa jao.
+                </p>
+                <p class="message romantic">
+                    "Tumhare bina meri duniya adhoori hai, Sabeeha. Tum mere jeevan ke sabse khaas hisse ho."
+                </p>
+                <div class="button-group">
+                    <button class="btn" onclick="prevPage()">⬅️ Back</button>
+                    <button class="btn" onclick="nextPage()">Continue 💝</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="page page-3">
+            <div class="content">
+                <h2 class="title">Tumhari Yaadein 🌟</h2>
+                <div class="memories">
+                    <div class="memory-card">
+                        <p class="emoji">😊</p>
+                        <p>Tumhara hasna - meri sabse pyaari cheez</p>
+                    </div>
+                    <div class="memory-card">
+                        <p class="emoji">👀</p>
+                        <p>Tumhari nazar - jo mere dil ko sama jaati hai</p>
+                    </div>
+                    <div class="memory-card">
+                        <p class="emoji">💬</p>
+                        <p>Tumhare lafz - jo mujhe insaan banate hain</p>
+                    </div>
+                    <div class="memory-card">
+                        <p class="emoji">❤️</p>
+                        <p>Tumhara dil - jo mere liye itna khaas hai</p>
+                    </div>
+                </div>
+                <p class="message romantic">
+                    "Har ek yaad meri jaan, har ek pal tumhare saath kitna special lagta hai."
+                </p>
+                <div class="button-group">
+                    <button class="btn" onclick="prevPage()">⬅️ Back</button>
+                    <button class="btn" onclick="nextPage()">Last Page 💕</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="page page-4">
+            <div class="content">
+                <h2 class="title">Mere Dil Se Tumhare Liye 💕</h2>
+                <p class="message romantic large">
+                    "Sabeeha, tum meri jaan ho. Tumhare bina mere jeevan mein rang hi nahin raha."
+                </p>
+                <p class="message">
+                    Is din ko special banana ke liye maine yeh page banaya hai. Agar tumhara gussa sirf pyaar se badal jaaye toh mujhe ab duniya ki koi cheez chaiye nahi.
+                </p>
+                <p class="message romantic">
+                    Main har din tumhare saath hona chahta hoon, tumhara hassa hona chahta hoon, tumhara dil jeetnaa chahta hoon.
+                </p>
+                
+                <div class="wishes">
+                    <h3>Tumhare Liye Special Birthday Wishes:</h3>
+                    <div class="wish-item">✨ Tum lambi umr jiyo, khush raho, aur ek din mujhe maaf kar do</div>
+                    <div class="wish-item">🌹 Tumhare har din special hoke, mujhe tumhari khushi dikhe</div>
+                    <div class="wish-item">💝 Is saal tum khud pe proud ho, aur main tumhara sath hoo</div>
+                    <div class="wish-item">🎂 Tumhare dreams poore ho, aur main un dreams ko live kar saku tumhare saath</div>
+                </div>
+
+                <p class="message final-message">
+                    Main tumhara wait karunga, jab tak tum mujhe maaf nahi kar dogi. Tum meri sab kuch ho, Sabeeha. 🌹💕
+                </p>
+                
+                <div class="button-group">
+                    <button class="btn" onclick="prevPage()">⬅️ Back</button>
+                    <button class="btn" onclick="restartPages()">Start Again ♻️</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-indicator">
+            <span class="dot active" onclick="goToPage(0)"></span>
+            <span class="dot" onclick="goToPage(1)"></span>
+            <span class="dot" onclick="goToPage(2)"></span>
+            <span class="dot" onclick="goToPage(3)"></span>
+        </div>
+    </div>
+
+    <script src="romantic-script.js"></script>
+</body>
+</html>
