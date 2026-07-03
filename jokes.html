@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator 😂</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+        .container { max-width: 600px; text-align: center; }
+        .title { font-size: 3rem; color: #fff; margin-bottom: 20px; }
+        .joke-box { background: white; padding: 40px; border-radius: 15px; margin-bottom: 30px; font-size: 1.3rem; min-height: 150px; display: flex; align-items: center; justify-content: center; }
+        .btn { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 15px 40px; font-size: 1rem; border-radius: 50px; cursor: pointer; margin: 10px; }
+        .btn:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">😂 Joke Generator</h1>
+        <div class="joke-box">
+            <p id="joke">Click button to get a joke!</p>
+        </div>
+        <button class="btn" onclick="getJoke()">Get Joke</button>
+        <button class="btn" onclick="shareJoke()">Share</button>
+    </div>
+    <script>
+        let lastJoke = '';
+        async function getJoke() {
+            document.getElementById('joke').textContent = 'Loading...';
+            try {
+                const res = await fetch('https://official-joke-api.appspot.com/random_joke');
+                const data = await res.json();
+                lastJoke = data.setup + ' ' + data.punchline;
+                document.getElementById('joke').textContent = lastJoke;
+            } catch(e) {
+                document.getElementById('joke').textContent = 'Error loading joke!';
+            }
+        }
+        function shareJoke() {
+            if(lastJoke) navigator.clipboard.writeText(lastJoke);
+        }
+        getJoke();
+    </script>
+</body>
+</html>
